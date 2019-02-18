@@ -1,0 +1,12 @@
+Pointcut Expression syntax
+execution(modifiers? return-type declaring-type?
+			method-name(paramS) throws?)
+			
+? = optional (modifier can be dropped)
+wildcards can be used; *
+
+ex.
+	ALL
+	@Before("execution(public void addAccount())")
+	SPECIFIC
+	@Before("execution(public void com.aop.before.dao.AccountDAO.addAccount())")
